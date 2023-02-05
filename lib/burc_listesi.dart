@@ -7,8 +7,11 @@ class BurcListesi extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text("Burç listesi buraya gelecek"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Burç Listesi"),
+      ),
+      body: Center(child: Text("Burçlar buraya gelecek.")),
     );
   }
 }
