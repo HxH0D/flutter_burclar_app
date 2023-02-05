@@ -10,7 +10,7 @@ class Burc {
 
   @override
   String toString() {
-    // TODO: implement toString
     return "$_burcAdi -- $_burcBuyukResim";
   }
+  // değişken.toString() yazılınce ne tarzda çıktı vereceğini ayarladık
 }
