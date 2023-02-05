@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_burclar_app/burc_item.dart';
 import 'package:flutter_burclar_app/data/strings.dart';
 
 import 'model/burc.dart';
@@ -17,7 +18,14 @@ class BurcListesi extends StatelessWidget {
       appBar: AppBar(
         title: Text("Burç Listesi"),
       ),
-      body: ListView(),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return BurcItem(
+            listelenenBurc: tumBurclar[index],
+          ); //burc_item.dart da oluşturduğumuz wiget
+        },
+        itemCount: tumBurclar.length, // listedeki eleman sayısı belirtildi
+      ),
     );
   }
 
