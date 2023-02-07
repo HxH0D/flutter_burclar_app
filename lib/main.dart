@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.pink,
       ),
       title: "Burçlar App",
-      home: BurcListesi(),
+      home: BurcListesi(), // burc_listesi.dart da ki BurcListesi widgeti
     );
   }
 }
