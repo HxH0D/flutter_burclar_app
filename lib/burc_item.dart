@@ -20,11 +20,9 @@ class BurcItem extends StatelessWidget {
       margin: EdgeInsets.all(5),
       child: ListTile(
         onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => BurcDetay(secilenBurc: listelenenBurc),
-            ),
-          );
+          //burc detay sayfasına yönlendirme
+          Navigator.of(context)
+              .pushNamed("/burcDetay", arguments: listelenenBurc);
         },
         leading: Image.asset(
           "images/${listelenenBurc.burcKucukResim}",
@@ -37,7 +35,7 @@ class BurcItem extends StatelessWidget {
           listelenenBurc.burcTarihi,
           style: myTextStyle.labelLarge,
         ),
-        trailing: Icon(
+        trailing: const Icon(
           Icons.arrow_forward_ios,
           color: Colors.pink,
         ),

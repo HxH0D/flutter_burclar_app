@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_burclar_app/route_generator.dart';
 
 import 'burc_listesi.dart';
 
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.pink,
       ),
       title: "Burçlar App",
-      home: BurcListesi(), // burc_listesi.dart da ki BurcListesi widgeti
+      //route_generator.dart da RouteGenerator adlı klası oluşturduk ve yönlendirmeleri orda yaptık
+      onGenerateRoute: RouteGenerator.routeGenerator,
     );
   }
 }
